@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataUmkmController;
+use App\Http\Controllers\JenisUsahaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/dataumkm', [DataUmkmController::class, 'index']);
+
+// Jenis Usaha
+Route::get('/jenisusaha', [JenisUsahaController::class, 'index']);
+Route::get('/jenisusaha/{id}', [JenisUsahaController::class, 'show']);
+Route::post('/jenisusaha', [JenisUsahaController::class, 'save']);
+Route::put('/jenisusaha/{id}', [JenisUsahaController::class, 'update']);
+Route::delete('/jenisusaha/{id}', [JenisUsahaController::class, 'delete']);
 

@@ -17,9 +17,9 @@ class DataUmkmController extends Controller
         $result['status'] = 200;
         try {
             $result['data'] = $this->umkmService->getAllDataUMKM(10);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $result = [
-                'status'=>200,
+                'status'=>500,
                 'error'=>$e->getMessage()
             ];
         }
