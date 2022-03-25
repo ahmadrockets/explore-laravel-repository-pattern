@@ -62,7 +62,10 @@ class JenisUsahaRepositoryTest extends TestCase
         $this->assertEquals($newJenisUsaha->jenis_usaha_id, $jenisUsaha->jenis_usaha_id);
         $this->assertEquals($paramsUpdate['nama'], $jenisUsaha->nama);
     }
-    public function testCanDeletejenisUsaha()
+    /**
+     * @test
+     */
+    public function it_can_delete_jenis_usaha()
     {
         $countOldData = JenisUsaha::count();
         $newJenisUsaha = JenisUsaha::factory()->create();
