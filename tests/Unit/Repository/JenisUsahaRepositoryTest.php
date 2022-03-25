@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Repository;
 
 use App\Models\JenisUsaha;
 use App\Repositories\Mysql\JenisUsahaRepository;
